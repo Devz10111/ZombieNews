@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZOMBIE_NEWS // Terminal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="crt-overlay"></div>
+  <div id="scanlines"></div>
+
+  <header id="hud">
+    <div class="hud-left">
+      <span class="hud-logo">[ZN]</span>
+      <span class="hud-title">ZOMBIE_NEWS v3.7.1</span>
+    </div>
+    <nav class="hud-center">
+      <a href="#hero">INICIO</a>
+      <a href="#grid">NOTICIAS</a>
+      <a href="#about">SOBRE</a>
+    </nav>
+    <div class="hud-right">
+      <span id="hud-clock"></span>
+      <span class="hud-status">SYS:ONLINE</span>
+    </div>
+  </header>
+
+  <div id="ticker-bar">
+    <div id="ticker-label">&gt; URGENTE_</div>
+    <div id="ticker-track">
+      <div id="ticker-content"></div>
+    </div>
+  </div>
+
+  <main>
+    <section id="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-content">
+        <div class="hero-tag">&gt; JUEGO_DESTACADO //</div>
+        <h1 id="hero-title">CARRION PROTOCOL</h1>
+        <div class="hero-meta">
+          <span>GENERO: SURVIVAL HORROR</span>
+          <span>PLATAFORMA: PC / PS5</span>
+          <span>FECHA: Q4 2026</span>
+        </div>
+        <p class="hero-desc">
+          Los jugadores despiertan en una estacion orbital abandonada donde el
+          prototipo de arma biologica #CARRION ha liberado una plaga que
+          transforma a la tripulacion en criaturas mutantes. Gestionar recursos,
+          fabricar trampas y decidir quien vive o muere en cada ciclo de 47
+          minutos antes de que la estacion se autodestruya.
+        </p>
+        <a href="#" class="hero-cta">&gt; LEER ANALISIS COMPLETO [ENTER]</a>
+      </div>
+      <div class="hero-ascii" aria-hidden="true">
+<pre>
+    ╔═══════════════════════╗
+    ║   ░░░░░░░░░░░░░░░░   ║
+    ║   ░  CARRION   ░░   ║
+    ║   ░░ PROTOCOL ░░░   ║
+    ║   ░░░░░░░░░░░░░░░░   ║
+    ║   [▓▓▓▓▓▓▓▓░░░░] 68% ║
+    ║   INFECCION蔓延中...   ║
+    ╚═══════════════════════╝
+</pre>
+      </div>
+    </section>
+
+    <section id="grid">
+      <div class="section-header">&gt; FEED_DE_NOTICIAS //</div>
+      <div class="article-grid">
+        <article class="card card-large">
+          <div class="card-tag">ANALISIS</div>
+          <h2>HOLLOW CONTAINMENT: El.isOpen</h2>
+          <p>
+            El nuevo survival de Tanker Studios nos encierra en un buncer
+            subterraneo de 12 niveles donde cada piso tiene su propia ecologia
+            de criaturas. El sistema de sombras dinamicas convierte cada rincon
+            en una potencial trampa. Nuestra verdicto: 9.2/10.
+          </p>
+          <div class="card-meta">
+            <span>2026.09.08</span>
+            <span>AUTOR: R.RAMIREZ</span>
+          </div>
+        </article>
+
+        <article class="card card-small">
+          <div class="card-tag">NOTICIA</div>
+          <h3>DEAD MERIDIAN anuncia modo cooperativo para 4 jugadores</h3>
+          <p>
+            El modo "Squad Zero" permitira partidas clasificadas con sistema
+            de roles: Scout, Medic, Heavy y Demolition.
+          </p>
+          <div class="card-meta"><span>2026.09.07</span></div>
+        </article>
+
+        <article class="card card-small">
+          <div class="card-tag">OPINION</div>
+          <h3>Por que los survival zombies estan matando al battle royale</h3>
+          <p>
+            Los numeros no mienten: la retencion a 30 dias de los survival
+            cooperativos triplica la de los BR en 2026.
+          </p>
+          <div class="card-meta"><span>2026.09.06</span></div>
+        </article>
+
+        <article class="card card-small">
+          <div class="card-tag">GUIA</div>
+          <h3>CARRION PROTOCOL: 15 tips para sobrevivir el Ciclo 1</h3>
+          <p>
+            Desde哪里priorizar el oxigeno hasta las ubicaciones de los
+            Tanques de nitrogeno. Guia completa actualizada.
+          </p>
+          <div class="card-meta"><span>2026.09.05</span></div>
+        </article>
+
+        <article class="card card-small">
+          <div class="card-tag">LANZAMIENTO</div>
+          <h3>PHANTOM DECAY sale la semana que viene en Early Access</h3>
+          <p>
+            Horror de supervivencia en primera persona con mecanica de
+            "decaimiento de cordura" que altera la interfaz del juego.
+          </p>
+          <div class="card-meta"><span>2026.09.04</span></div>
+        </article>
+
+        <article class="card card-small">
+          <div class="card-tag">RUMOR</div>
+          <h3>Spec Ops: INFECTION podria llegar a Game Pass este octubre</h3>
+          <p>
+            Fuentes internas sugieren un acuerdo de exclusividad temporal
+            para el titulo de Monolith Games.
+          </p>
+          <div class="card-meta"><span>2026.09.03</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-header">&gt; SYSTEM_INFO //</div>
+      <div class="stats-panel">
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-label">PROYECTO</div>
+            <div class="stat-value">ZOMBIE_NEWS</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">VERSION</div>
+            <div class="stat-value">3.7.1-BETA</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">ESTADO</div>
+            <div class="stat-value blink">&gt; ACTIVO</div>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-label">FOCO_EDITORIAL</div>
+            <div class="stat-value">SURVIVAL / HORROR / ZOMBIE</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">ARTICULOS</div>
+            <div class="stat-value" id="article-count">0</div>
+          </div>
+        </div>
+        <div class="stats-desc">
+          <p>
+            ZombieNews es un outlet ficticio de noticias de videojuegos
+            enfocado en el genero survival horror y zombie. Todos los titulos,
+            juegos y nombres de estudios son inventados. Este sitio es un
+            PROYECTO DEMO creado con HTML, CSS y JS puro como ejercicio
+            de frontend con estetica terminal/hacker.
+          </p>
+          <p class="stats-disclaimer">
+            // NINGUNA de las noticias presentadas aqui es real.
+            // Todos los juegos mencionados son ficticios.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-line"></div>
+    <div class="footer-content">
+      <span>&copy; 2026 ZOMBIE_NEWS — PROYECTO DEMO</span>
+      <span>USO EXCLUSIVO CON FINES ACADEMICOS / PORTAFOLIO</span>
+      <span>NO SOMOS UN MEDIO DE NOTICIAS REAL</span>
+    </div>
+    <div class="footer-ascii">
+      <pre>://FINALIZAND_SISTEMA... [/] DESconectado.</pre>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
