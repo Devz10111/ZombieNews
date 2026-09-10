@@ -1,37 +1,3 @@
-// ===== CLOCK =====
-function updateClock() {
-  const now = new Date();
-  const h = String(now.getHours()).padStart(2, '0');
-  const m = String(now.getMinutes()).padStart(2, '0');
-  const s = String(now.getSeconds()).padStart(2, '0');
-  const el = document.getElementById('hud-clock');
-  if (el) el.textContent = h + ':' + m + ':' + s;
-}
-setInterval(updateClock, 1000);
-updateClock();
-
-// ===== TICKER =====
-const headlines = [
-  'BREAKING: CARRION PROTOCOL supera las 2M de descargas en su primera semana',
-  'ALERTA: DEAD MERIDIAN recibe parche de平衡amiento para modo Ranked',
-  'EXCLUSIVA: Monolith Games trabaja en un nuevo titulo de universo SPEC OPS',
-  'REVIEW: PHANTOM DECAY obtiene calificacion perfecta en portales especializados',
-  'DATOS: El genero survival horror crece un 340% en elmercado indie durante 2026',
-  'EVENTO: ZOMBICON 2026 anunciada para noviembre — 50 estudios confirmados',
-  'TRAILER: HOLLOW CONTAINMENT muestra 20 minutos de gameplay sin cortes',
-  'PATCH: CARRION PROTOCOL v1.2 corrige bugs de progresion en Ciclo 8+',
-];
-
-function buildTicker() {
-  const el = document.getElementById('ticker-content');
-  if (!el) return;
-  const text = headlines.map(function (h) {
-    return '//  ' + h + '  ';
-  }).join('');
-  el.textContent = text;
-}
-buildTicker();
-
 // ===== ARTICLE COUNTER =====
 function animateCount(target, duration) {
   const el = document.getElementById('article-count');

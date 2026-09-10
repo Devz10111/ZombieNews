@@ -6,33 +6,7 @@
   <title>ZOMBIE_NEWS // Terminal</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="crt-overlay"></div>
-  <div id="scanlines"></div>
-
-  <header id="hud">
-    <div class="hud-left">
-      <span class="hud-logo">[ZN]</span>
-      <span class="hud-title">ZOMBIE_NEWS v3.7.1</span>
-    </div>
-    <nav class="hud-center">
-      <a href="#hero">INICIO</a>
-      <a href="#grid">NOTICIAS</a>
-      <a href="#about">SOBRE</a>
-    </nav>
-    <div class="hud-right">
-      <span id="hud-clock"></span>
-      <span class="hud-status">SYS:ONLINE</span>
-    </div>
-  </header>
-
-  <div id="ticker-bar">
-    <div id="ticker-label">&gt; URGENTE_</div>
-    <div id="ticker-track">
-      <div id="ticker-content"></div>
-    </div>
-  </div>
-
+<body data-page="inicio">
   <main>
     <section id="hero">
       <div class="hero-grid-bg"></div>
@@ -181,18 +155,7 @@
     </section>
   </main>
 
-  <footer>
-    <div class="footer-line"></div>
-    <div class="footer-content">
-      <span>&copy; 2026 ZOMBIE_NEWS — PROYECTO DEMO</span>
-      <span>USO EXCLUSIVO CON FINES ACADEMICOS / PORTAFOLIO</span>
-      <span>NO SOMOS UN MEDIO DE NOTICIAS REAL</span>
-    </div>
-    <div class="footer-ascii">
-      <pre>://FINALIZAND_SISTEMA... [/] DESconectado.</pre>
-    </div>
-  </footer>
-
+  <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

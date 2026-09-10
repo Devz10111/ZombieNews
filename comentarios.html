@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZOMBIE_NEWS // COMENTARIOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="comentarios">
+  <main class="page-main">
+    <header class="page-header">
+      <div class="page-path">comentarios</div>
+      <h1 class="page-title">CANAL DE TRANSMISION</h1>
+      <p class="page-subtitle">
+        &gt; COMENTARIOS EN VIVO VIA GISCUS (GITHUB DISCUSSIONS). Para comentar
+        necesitas una cuenta de GitHub. Los comentarios quedan guardados en el
+        repositorio del proyecto.
+      </p>
+    </header>
+
+    <section class="comments-panel">
+      <div class="giscus-frame">
+        <div id="giscus"></div>
+
+        <div id="giscus-unconfigured" class="giscus-instructions" style="display: none;">
+          <h2>[!] SISTEMA NO CONFIGURADO</h2>
+          <p class="page-subtitle">
+            La seccion de comentarios requiere configuracion manual (una sola
+            vez). Sigue estos pasos:
+          </p>
+          <ol>
+            <li>Activa <code>Discussions</code> en tu repo: <strong>Settings &rarr; General &rarr; Discussions</strong>.</li>
+            <li>Entra a <code>https://giscus.app</code> y conecta tu cuenta de GitHub.</li>
+            <li>Elige el repositorio <code>Devz10111/ZombieNews</code> y una categoria (ej. <code>General</code>).</li>
+            <li>Copia los 4 valores del paso "Enable giscus": <code>data-repo</code>, <code>data-repo-id</code>, <code>data-category</code> y <code>data-category-id</code>.</li>
+            <li>Pega esos valores en el bloque <code>GISCUS_CONFIG</code> que esta en este mismo archivo (<code>comentarios.html</code>).</li>
+            <li>Guarda, haz push y recarga esta pagina.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="components.js"></script>
+
+  <script>
+    // ===== CONFIG_GISCUS =====
+    // Completa estos 4 valores en https://giscus.app y guarda el archivo.
+    var GISCUS_CONFIG = {
+      repo: 'Devz10111/ZombieNews',
+      repoId: '',      // <-- rellena (data-repo-id)
+      category: 'General',
+      categoryId: ''   // <-- rellena (data-category-id)
+    };
+
+    (function () {
+      var cfg = GISCUS_CONFIG;
+      var ok = cfg.repo && cfg.repoId && cfg.category && cfg.categoryId;
+      var un = document.getElementById('giscus-unconfigured');
+
+      if (!ok) {
+        if (un) un.style.display = 'block';
+        return;
+      }
+      if (un) un.style.display = 'none';
+
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      script.crossOrigin = 'anonymous';
+      script.setAttribute('data-repo', cfg.repo);
+      script.setAttribute('data-repo-id', cfg.repoId);
+      script.setAttribute('data-category', cfg.category);
+      script.setAttribute('data-category-id', cfg.categoryId);
+      script.setAttribute('data-mapping', 'pathname');
+      script.setAttribute('data-strict', '0');
+      script.setAttribute('data-reactions-enabled', '1');
+      script.setAttribute('data-emit-metadata', '0');
+      script.setAttribute('data-input-position', 'bottom');
+      script.setAttribute('data-theme', 'dark');
+      script.setAttribute('data-lang', 'es');
+
+      var container = document.getElementById('giscus');
+      if (container) container.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
