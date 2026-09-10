@@ -28,6 +28,7 @@
     '<header id="hud">' +
       '<div class="hud-left">' +
         '<a class="hud-logo" href="index.html">[ZN]</a>' +
+        '<img class="hud-logo-img" src="logo.png" alt="ZOMBIE_NEWS logo">' +
         '<span class="hud-title">ZOMBIE_NEWS v3.7.1</span>' +
       '</div>' +
       '<nav class="hud-center">' + navLinks(false) + '</nav>' +

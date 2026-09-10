@@ -120,6 +120,12 @@ body {
   color: var(--green-dim);
 }
 
+.hud-logo-img {
+  height: 14px;
+  width: auto;
+  vertical-align: middle;
+}
+
 .hud-center {
   display: flex;
   gap: 24px;
